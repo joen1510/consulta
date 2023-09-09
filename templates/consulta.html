@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        h2 {text-transform: uppercase;}
+        H1.uno {text-align: center}
+    H4.dos {text-align: center}
+    </style>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+<p>&nbsp;</p>
+<h1 class="uno"><a ><span style="color: #1b7146;">REPORTE DEL PRODUCTO <em>"{{nom_prod}}"</em></span></a></h1>
+<form action="/generar" method="POST">
+                            <p><label for="uno">Imprimir Reporte:</label>
+                            <button class="btn btn-primary" type="submit " name="pu">Aqui</button></p>
+                        </form>
+<hr />
+<p>{% for ciu in Productos %}</p>
+<table style="border-collapse: collapse; width: 61.5984%; height: 54px;" border="0">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 28.7975%; height: 18px;"><strong>Art&iacute;culo:</strong></td>
+<td style="width: 71.2025%; height: 18px;">{{ciu.Nom_pro}}</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 28.7975%; height: 18px;"><strong>Estado :</strong></td>
+<td style="width: 71.2025%; height: 18px;">{{ciu.Est_pro}}</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 28.7975%; height: 18px;"><strong>Precio&nbsp; :</strong></td>
+<td style="width: 71.2025%; height: 18px;">{{ciu.Pre_pro}}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>{% endfor %}</p>
+<p>{{tot}} productos extraidos</p>
+</body>
+</html>

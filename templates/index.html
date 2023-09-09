@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <STYLE type="text/css">
+  H1.uno {text-align: center}
+  H4.dos {text-align: center}
+ </STYLE>
+</head>
+<body>
+<H1 class="uno"> *Lista de Productos* </H1>
+<div class="row row-col-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-3">{% for l in listadb %}</div>
+<ul style="list-style-type: disc;">
+<li>{{l}}</li>
+</ul>
+<div class="row row-col-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-3">{% endfor %}</div>
+<form action="/llamar" method="POST">
+                            <label>Ingrese un Producto: </label>
+                            <input type="text" class="form-control mb-3" name="enviar">
+                            <button class="btn btn-primary" type="submit">Consultar</button>
+                        </form>
+</body>
+</html>
